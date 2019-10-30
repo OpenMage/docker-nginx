@@ -93,7 +93,7 @@ RUN set -xe; \
 HEALTHCHECK --start-period=10s --interval=10s --timeout=1s CMD curl --fail http://127.0.0.1/nginx-status/ || exit 1
 
 # Set stop signal
-STOPSIGNAL SIGTERM
+STOPSIGNAL SIGQUIT
 
 # Set work dir
 WORKDIR /var/www/html
