@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Run hadolint
-        run: hadolint Dockerfile
+        run: hadolint src/Dockerfile-latest
 
   build:
     runs-on: ubuntu-latest
