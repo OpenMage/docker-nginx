@@ -31,6 +31,8 @@ jobs:
       - name: Save Docker image artifact
         run: docker save -o action.tar $TEST_IMAGE_NAME
 
+      - run: ls -lh action.tar
+
       - name: Upload image artifact
         uses: actions/upload-artifact@master
         with:
