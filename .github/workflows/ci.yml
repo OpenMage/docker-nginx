@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Build Docker image
-        run: docker build -f $DOCKERFILE_LOCATION -t $TEST_IMAGE_NAME .
+        run: docker build -f $DOCKERFILE_LOCATION -t $TEST_IMAGE_NAME ./src
 
       - name: Save Docker image artifact
         run: docker save -o action.tar $TEST_IMAGE_NAME
