@@ -1,4 +1,4 @@
-FROM docker.io/openmage/debian:stretch-latest
+FROM docker.io/openmage/debian:buster-latest
 
 COPY root /
 
@@ -17,7 +17,7 @@ ARG NGINX_RUNTIME_REQUIREMENTS_EXTRA=""
 ARG NGINX_BUILD_REQUIREMENTS="build-essential libpcre3-dev libbz2-dev libssl1.0-dev zlib1g-dev git libbrotli-dev"
 ARG NGINX_BUILD_REQUIREMENTS_EXTRA=""
 ARG NGINX_EXTRA_CONFIGURE_ARGS=""
-ARG NGINX_VERSION="1.17.5"
+ARG NGINX_VERSION="1.17.4"
 
 ## configure nginx and the dependencies
 RUN set -xe; \
