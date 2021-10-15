@@ -1,4 +1,4 @@
-FROM docker.io/openmage/debian:buster-latest
+FROM openmage/debian:bullseye-latest
 
 COPY root /
 
@@ -14,10 +14,10 @@ RUN set -xe; \
 
 ARG NGINX_RUNTIME_REQUIREMENTS="curl zlib1g"
 ARG NGINX_RUNTIME_REQUIREMENTS_EXTRA=""
-ARG NGINX_BUILD_REQUIREMENTS="build-essential libpcre3-dev libbz2-dev libssl1.0-dev zlib1g-dev git libbrotli-dev"
+ARG NGINX_BUILD_REQUIREMENTS="build-essential libpcre3-dev libbz2-dev libssl-dev zlib1g-dev git libbrotli-dev"
 ARG NGINX_BUILD_REQUIREMENTS_EXTRA=""
 ARG NGINX_EXTRA_CONFIGURE_ARGS=""
-ARG NGINX_VERSION="1.19.6"
+ARG NGINX_VERSION="1.21.3"
 
 ## configure nginx and the dependencies
 RUN set -xe; \
