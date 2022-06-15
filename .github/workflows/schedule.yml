@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        version: [ '1.19.10', '1.20.2', 'latest' ]
+        version: [ 'legacy', 'stable', 'mainline' ]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
